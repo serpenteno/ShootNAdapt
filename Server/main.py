@@ -54,3 +54,8 @@ def send_player_stats(player_stats: PlayerStats) -> DifficultyLevels:
     )
     return difficulty_levels
 
+    
+@app.get("/test_connection")
+def test_connection() -> None:
+    return
+
