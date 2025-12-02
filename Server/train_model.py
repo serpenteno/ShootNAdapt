@@ -21,8 +21,8 @@ X = data[["accuracy", "reactionTimeRatio"]]
 y_target_size = data["targetSize"]
 y_target_life_span = data["targetLifeSpan"]
 
-model_target_size = DecisionTreeClassifier(max_depth=3)
-model_target_life_span = DecisionTreeClassifier(max_depth=3)
+model_target_size = DecisionTreeClassifier(max_depth=2)
+model_target_life_span = DecisionTreeClassifier(max_depth=2)
 
 model_target_size.fit(X, y_target_size)
 model_target_life_span.fit(X, y_target_life_span)
