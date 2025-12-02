@@ -72,3 +72,7 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Server
+Server/__pycache__/*
+Server/game_data.csv
