@@ -34,10 +34,11 @@ model_target_life_span = joblib.load("model_target_life_span.pkl")
 
 @app.post("/send_player_stats")
 def send_player_stats(player_stats: PlayerStats) -> DifficultyLevels:
-    X = [[player_stats.accuracy, player_stats.reactionTimeRatio]]
+    X_accuracy = [[player_stats.accuracy]]
+    X_reaction_time_ratio = [[player_stats.reactionTimeRatio]]
     
-    predicted_target_size = int(model_target_size.predict(X)[0])
-    predicted_target_life_span = int(model_target_life_span.predict(X)[0])
+    predicted_target_size = int(model_target_size.predict(X_accuracy)[0])
+    predicted_target_life_span = int(model_target_life_span.predict(X_reaction_time_ratio)[0])
     
     return DifficultyLevels(
         targetSize=predicted_target_size,
