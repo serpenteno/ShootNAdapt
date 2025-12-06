@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from enum import IntEnum
 import joblib
-import pandas as pd
 
 
 app = FastAPI(title="ShootNAdapt")
